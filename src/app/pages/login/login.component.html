@@ -1,0 +1,17 @@
+<div class="p-grid p-fluid">
+  <div class="p-col-6 p-md-6 p-lg-6 p-offset-3 p-md-offset-3 p-lg-offset-3">
+    <p-card header="Login">
+      <div class="p-grid p-fluid">
+        <div class="p-field p-col-12 p-md-12 p-lg-12 ">
+    <span>
+      <label for="name">Name</label>
+      <input type="text" pInputText id="name" [(ngModel)]="player.name"/>
+    </span>
+        </div>
+        <div class="p-col-12 p-md-12 p-lg-12">
+          <button pButton type="button" label="Entrar" (click)="onClick($event)"></button>
+        </div>
+      </div>
+    </p-card>
+  </div>
+</div>
