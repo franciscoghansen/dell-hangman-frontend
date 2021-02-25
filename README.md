@@ -1,27 +1,16 @@
-# DellHangmanFront
+# Dell Hangman FrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
+This is the Front-End of the Hangman App.
 
-## Development server
+## Getting Started
+* Make sure Node and Angular are installed
+* Change the _environment.api_ variable in /src/environments/environment.ts to the base url of the server
+* Run `ng build` to build the project. The generated files will be available in /dist
+* Copy the generated files to the application server of your preference.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## How to play
+* Open the url in your navigator
+* Enter your name and click Login
+* A random word will be selected for you to guess.
+  * You need to guess every letter of the word.
+  * You can guess 6 wrong letters.
