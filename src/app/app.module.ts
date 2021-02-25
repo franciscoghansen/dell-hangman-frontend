@@ -13,7 +13,12 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { MenuComponent } from './components/menu/menu.component';
 import {TabMenuModule} from 'primeng/tabmenu';
-import {MenuItem} from 'primeng/api';
+import { WordComponent } from './components/word/word.component';
+import { GameComponent } from './components/game/game.component';
+import { LettersComponent } from './components/letters/letters.component';
+import {DialogModule} from 'primeng/dialog';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { DrawingComponent } from './components/drawing/drawing.component';
 
 
 @NgModule({
@@ -21,17 +26,23 @@ import {MenuItem} from 'primeng/api';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    WordComponent,
+    GameComponent,
+    LettersComponent,
+    DrawingComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     RouterModule,
     InputTextModule,
     ButtonModule,
     CardModule,
     FormsModule,
-    TabMenuModule
+    TabMenuModule,
+    DialogModule
   ],
   exports: [AppRoutingModule],
   providers: [],

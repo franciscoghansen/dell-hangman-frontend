@@ -25,7 +25,7 @@ export abstract class AbstractService<T extends AbstractModel> {
   }
 
   save(obj: T): Promise<T> {
-    return this.http.post<T>(this.baseUrl(), obj).toPromise();
+    return this.http.post<T>(this.baseUrl() + '/save', obj).toPromise();
   }
 
 }
