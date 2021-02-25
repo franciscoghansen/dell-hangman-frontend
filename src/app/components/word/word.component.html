@@ -1,0 +1,12 @@
+<div class="p-grid p-fluid">
+  <ng-container *ngFor="let letter of word.word.split('')">
+    <div class="p-col-1 p-md-1 p-lg-1">
+      <ng-container *ngIf="letterIsUsed(letter)">
+        <input [disabled]="true" [ngModel]="letter" pInputText type="text">
+      </ng-container>
+      <ng-container *ngIf="!letterIsUsed(letter)">
+        <input [disabled]="true" pInputText type="text">
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

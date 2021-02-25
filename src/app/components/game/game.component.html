@@ -1,0 +1,26 @@
+<div class="p-grid p-fluid" *ngIf="game">
+  <div class="p-col-6 p-md-6 p-lg-6">
+    <app-drawing [game]="game"></app-drawing>
+  </div>
+  <div class="p-col-12 p-md-12 p-lg-12">
+    <app-word [word]="game?.word" [letters]="validLetters" [forceShow]="forceShowLetters"></app-word>
+  </div>
+  <div class="p-col-6 p-md-6 p-lg-6" *ngIf="!finished">
+    <app-letters (onLetterSelect)="onLetterSelect($event)" [usedLetters]="usedLetters"
+                 [invalidLetters]="invalidLetters"></app-letters>
+  </div>
+  <p-dialog header="Game Over" [(visible)]="dialogVisible" [closable]="false" [style]="{width: '50vw'}">
+    <p>{{lost ? 'Sorry, You Lost!' : 'Congratulations!'}}</p>
+    <p>{{lost ? 'The word was ' + game.word.word + '!' : 'You Win!' }}</p>
+    <div class="p-grid p-fluid">
+      <div class="p-col-6 p-md-6 p-lg-6">
+        <button pButton label="New Game" (click)="newGame()"></button>
+      </div>
+      <div class="p-col-6 p-md-6 p-lg-6">
+        <button pButton label="Exit" (click)="onExitClick()"></button>
+      </div>
+    </div>
+  </p-dialog>
+</div>
+
+

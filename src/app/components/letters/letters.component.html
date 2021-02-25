@@ -1,0 +1,10 @@
+<div class="p-grid p-fluid">
+  <ng-container *ngFor="let letter of alphabet">
+    <div class="p-col-1 p-md-1 p-lg-1">
+      <button type="button" pButton [label]="letter"
+              [disabled]="letterDisabled(letter)"
+              [class]="invalidLetter(letter) ?'p-button-danger' : ''"
+              (click)="letterClick(letter)"></button>
+    </div>
+  </ng-container>
+</div>

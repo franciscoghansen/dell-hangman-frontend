@@ -1,0 +1,6 @@
+textarea.hangman{
+  width: 250px;
+  height: 250px;
+  resize: none;
+  font-size: xx-large;
+}
